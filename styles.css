@@ -111,3 +111,31 @@ a {
     width: 44px;
     height: 44px;
 }
+.visitor-badge-container {
+    position: fixed;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Styling for the visitor badge image */
+.visitor-badge-container img {
+    max-width: 150px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #000; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Hover effect for the badge */
+.visitor-badge-container img:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .visitor-badge-container img {
+        max-width: 100px; /* Smaller size on smaller screens */
+    }
+}
